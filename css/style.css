@@ -6,14 +6,14 @@ body{
 }
 
 /* -----header-style-start----- */
-header{
+.header-container{
     background-color: #2D25A0;
     width: 100%;
     height: 677px;
     display: flex;
     justify-content: center;
 }
-.menu{
+.menu-section{
     width: 1140px;
     display: flex;
     justify-content: space-between;
@@ -43,11 +43,15 @@ header{
 .fa-arrow-right{
     margin-left: 8px;
 }
-.player-profile img{
+.player-profile-img img{
     width: 556.01px;
     height: 438px;
 }
+
+
 /* -----header-style-end----- */
+
+/* -----players-style-part----- */
 .main-container{
     width: 100%;
     height: 100%;
@@ -90,9 +94,11 @@ header{
 .player img{
     width: 100%;
 }
+/* -----players-style-end----- */
 
-/* --------------------------------- */
-.last{
+
+/* -----footer-section----- */
+.footer-section{
     margin-top: 50px;
     width: 100%;
     height: 340px;
@@ -108,7 +114,7 @@ header{
 .footer-logo img{
     width: 100%;
 }
-.icon{
+.social-icon{
     margin-top: 20px;
     width: 100%;
     height: 32px;
@@ -120,9 +126,68 @@ header{
     font-size: 32px;
     margin: 0px 10px;
 }
-.para{
+.footer-title{
     display: flex;
     justify-content: center;
     font-size: 18px;
     font-weight: 400;
+}
+/* -----footer-section-end----- */
+
+/* -----responsive-part----- */
+
+/* ----------mobile-part---------- */
+@media only screen and (max-width:688px) {
+    .header-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .menu-section{
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-content{
+        padding: 0px 20px;
+    }
+    .player-profile-img{
+        margin-top: 30px;
+    }
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    
+}
+
+/* ----------tablet-part---------- */
+@media only screen and (min-width:689px) and (max-width:992px) {
+    
+    .header-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .menu-section{
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-content{
+        padding: 0px 20px;
+    }
+    .player-profile-img{
+        margin-top: 30px;
+    }
+    
+    
+    
+    
+    
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

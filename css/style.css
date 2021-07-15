@@ -20,34 +20,53 @@ body{
     align-items: center;
     
 }
-.menu-content , .player-profile{
+.menu-content , .player-profile-img{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 .menu-content{
     width: 485px;
+    height: 438px;
 }
 .menu-content h1{
     color: white;
     font-size: 64px;
     font-weight: 700;
+    margin-bottom: 27px;
+    align-items: center;
 }
  .button{
     background-color: #E02C6D;
     color: white;
     padding: 10px 24px 10px 24px;
-    margin-right: 10px;
+    cursor: pointer;
+}
+
+.player-profile-img img{
+    width: 557px;
+    height: 438px;
 }
 .fa-arrow-right{
     margin-left: 8px;
 }
-.player-profile-img img{
-    width: 556.01px;
-    height: 438px;
+/* =======transition======= */
+.animate{
+    transition: transform 1.8s;
+}
+.menu-section:hover .animate{
+    width: 100%;
+    transform: translateX(300px);
 }
 
+.player-profile-img{
+    transition: transform 1.6s;
+}
+.menu-section:hover .player-profile-img{
+    transform: rotate(360deg);
+
+}
+/* ======= 0 ======= */
 
 /* -----header-style-end----- */
 
@@ -57,6 +76,7 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
     
 }
 .top-players{
@@ -78,11 +98,15 @@ body{
     background-color: white;
     box-shadow: 8px 8px 20px  gray;
 }
+
+.player img{
+    width: 100%;
+}
 .player h3{
     margin-top: 16px;
     margin-bottom: 0px;
     font-size: 28px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 .player p{
     margin-top: 10px;
@@ -91,10 +115,56 @@ body{
     font-size: 16px
     
 }
-.player img{
-    width: 100%;
-}
+
 /* -----players-style-end----- */
+
+/* -----football-teams----- */
+.team-section{
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+.teams{
+    width: 1140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team-content , .teams-img{
+    display: flex;
+    flex-direction: column;
+    
+}
+.team-content{
+    width: 485px;
+    height: 438px;
+}
+.team-content h1{
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 27px;
+    align-items: center;
+}
+ .button{
+    background-color: #E02C6D;
+    color: white;
+    padding: 10px 24px 10px 24px;
+}
+.teams-img img{
+    width: 600px;
+    height: 438px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px gray;
+}
+.fa-arrow-right{
+    margin-left: 8px;
+}
+
+
+
+/* --------- 0 ------- */
 
 
 /* -----footer-section----- */
@@ -138,54 +208,51 @@ body{
 
 /* ----------mobile-part---------- */
 @media only screen and (max-width:688px) {
-    .header-container{
+    .header-container,.team-section{
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
     }
-    .menu-section{
+    .menu-section,.teams{
+        padding: 10px;
         width: 100%; 
         display: flex;
         flex-direction: column;
     }
-    .menu-content{
+    .menu-content,.team-content{
         padding: 0px 20px;
     }
-    .player-profile-img{
+    .player-profile-img,.teams-img{
         margin-top: 30px;
     }
     .players{
         grid-template-columns: repeat(1, 1fr);
     }
-    
-    
+        
 }
 
 /* ----------tablet-part---------- */
 @media only screen and (min-width:689px) and (max-width:992px) {
     
-    .header-container{
+    .header-container,.team-section{
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
     }
-    .menu-section{
+    .menu-section,.teams{
+        padding: 20px;
         width: 100%; 
         display: flex;
         flex-direction: column;
     }
-    .menu-content{
+    .menu-content,.team-content{
         padding: 0px 20px;
     }
-    .player-profile-img{
+    .player-profile-img,.teams-img{
         margin-top: 30px;
     }
-    
-    
-    
-    
     
     .players{
         grid-template-columns: repeat(2, 1fr);
